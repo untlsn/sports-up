@@ -7,7 +7,9 @@ import {
   useForwardProps,
 } from 'reka-ui';
 
-const props = defineProps<DropdownMenuSubTriggerProps & { class?: HTMLAttributes['class']; inset?: boolean }>();
+interface Props extends DropdownMenuSubTriggerProps { class?: HTMLAttributes['class']; inset?: boolean }
+
+const props = defineProps<Props>();
 
 const delegatedProps = reactiveOmit(props, 'class', 'inset');
 const forwardedProps = useForwardProps(delegatedProps);

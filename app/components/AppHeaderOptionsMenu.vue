@@ -2,7 +2,7 @@
 const colorMode = useColorMode();
 
 const setTheme = (value: string) => {
-  colorMode.value = value;
+  colorMode.preference = value;
 };
 </script>
 

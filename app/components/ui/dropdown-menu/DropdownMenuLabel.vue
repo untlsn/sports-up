@@ -3,7 +3,10 @@ import type { HTMLAttributes } from 'vue';
 import { reactiveOmit } from '@vueuse/core';
 import { DropdownMenuLabel, type DropdownMenuLabelProps, useForwardProps } from 'reka-ui';
 
-const props = defineProps<DropdownMenuLabelProps & { class?: HTMLAttributes['class']; inset?: boolean }>();
+interface Props extends DropdownMenuLabelProps {
+  class?: HTMLAttributes['class']; inset?: boolean;
+}
+const props = defineProps<Props>();
 
 const delegatedProps = reactiveOmit(props, 'class', 'inset');
 const forwardedProps = useForwardProps(delegatedProps);

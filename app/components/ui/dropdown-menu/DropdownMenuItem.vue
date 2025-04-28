@@ -3,11 +3,13 @@ import type { HTMLAttributes } from 'vue';
 import { reactiveOmit } from '@vueuse/core';
 import { DropdownMenuItem, type DropdownMenuItemProps, useForwardProps } from 'reka-ui';
 
-const props = withDefaults(defineProps<DropdownMenuItemProps & {
+interface Props extends DropdownMenuItemProps {
   class?:   HTMLAttributes['class'];
   inset?:   boolean;
   variant?: 'default' | 'destructive';
-}>(), {
+}
+
+const props = withDefaults(defineProps<Props>(), {
   variant: 'default',
 });
 

@@ -8,7 +8,9 @@ import {
 } from 'reka-ui';
 import { computed, type HTMLAttributes } from 'vue';
 
-const props = defineProps<DropdownMenuRadioItemProps & { class?: HTMLAttributes['class'] }>();
+interface Props extends DropdownMenuRadioItemProps { class?: HTMLAttributes['class'] }
+
+const props = defineProps<Props>();
 
 const emits = defineEmits<DropdownMenuRadioItemEmits>();
 

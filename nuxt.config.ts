@@ -31,6 +31,8 @@ export default defineNuxtConfig({
 
   srcDir: './app',
 
+  devServer: { port: 3400 },
+
   future: {
     compatibilityVersion: 4,
   },
@@ -45,6 +47,6 @@ export default defineNuxtConfig({
 
   shadcn: {
     prefix:       'Ui',
-    componentDir: './components/ui',
+    componentDir: './app/components/ui',
   },
 });

@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 const links = [
-  { label: 'Home', to: '' },
+  { label: 'Home', to: '/' },
   { label: 'Events', to: '' },
   { label: 'Objects', to: '' },
   { label: 'About', to: '' },

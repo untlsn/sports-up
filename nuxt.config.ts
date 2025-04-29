@@ -17,6 +17,14 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
 
+  app: {
+    head: {
+      link: [
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+      ],
+    },
+  },
+
   css: ['./app/assets/css/main.css'],
 
   colorMode: {
@@ -45,7 +53,13 @@ export default defineNuxtConfig({
 
   eslint: { config: { stylistic: true } },
 
-  icon: { componentName: 'NuxtIcon' },
+  icon: {
+    componentName:     'NuxtIcon',
+    customCollections: [{
+      prefix: 'public',
+      dir:    './public',
+    }],
+  },
 
   shadcn: {
     prefix:       'Ui',

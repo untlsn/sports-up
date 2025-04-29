@@ -7,13 +7,7 @@ const year = new Date().getFullYear();
     <AppHeader />
     <slot />
     <footer class="border-t bg-white dark:bg-gray-950 dark:border-gray-800 p-8 grid grid-cols-3 gap-4 items-center text-sm max-md:grid-cols-2">
-      <div class="flex items-center gap-2 max-lg:col-span-full">
-        <NuxtIcon
-          name="ph:trophy"
-          class="text-6 leading-0 text-orange-500"
-        />
-        <span class="text-lg font-bold text-green-600">Sports-Up</span>
-      </div>
+      <AppLogoLabeled />
       <nav class="flex gap-4 text-gray-600 md:mx-auto">
         <NuxtLink
           to="#"

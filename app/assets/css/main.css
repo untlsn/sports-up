@@ -122,6 +122,6 @@
   font-size: calc(var(--spacing) * --value(integer));
 }
 
-button {
+button, a {
   cursor: pointer;
 }

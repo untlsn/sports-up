@@ -7,13 +7,14 @@
     <HomeSectionWithImage
       title="Create Sports Events & Objects with Ease"
       description="Sports-Up is your all-in-one platform for organizing sports events and creating sports objects. Connect with athletes, find venues, and grow your sports community."
+      img="/landing-page-1.png"
     >
-      <UiButton class="bg-green-600 text-white hover:bg-green-700 mr-4">
+      <UiButton>
         Create Event
       </UiButton>
       <UiButton
         variant="outline"
-        class="border-orange-500 text-orange-600 hover:bg-orange-50"
+        class="ml-4 border-secondary text-secondary hover:bg-secondary-foreground hover:text-secondary"
       >
         Browse Objects
       </UiButton>
@@ -61,13 +62,17 @@
     <HomeSectionWithImage
       title="Ready to elevate your sports experience?"
       description="Join Sports-Up today and start creating memorable sports events and managing sports objects with ease."
+      img="/landing-page-2.png"
     >
-      <UiButton class="bg-orange-500 text-white hover:bg-orange-600 mr-4">
-        Sign Up Now
+      <UiButton
+        variant="secondary"
+        as-child
+      >
+        <NuxtLink to="/sign/up">Sign Up Now</NuxtLink>
       </UiButton>
       <UiButton
         variant="outline"
-        class="border-green-500 text-green-600 hover:bg-green-50"
+        class="ml-4 border-green-500 text-green-600 hover:bg-green-50"
       >
         Learn More
       </UiButton>

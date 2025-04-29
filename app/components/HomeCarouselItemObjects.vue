@@ -44,33 +44,34 @@ const objects = [
     :key="object.id"
     :title="object.title"
   >
-    <div class="flex items-center text-sm text-gray-600 dark:text-gray-300">
+    <div class="flex items-center">
       <NuxtIcon
         name="ph:tag"
         class="text-green-600 mr-2 text-4"
       />
       {{ object.category }}
     </div>
-    <div class="flex items-center text-sm text-gray-600 dark:text-gray-300">
+    <div class="flex items-center">
       <NuxtIcon
         name="ph:star"
         class="text-orange-600 mr-2 text-4"
       />
       {{ object.rating }} rating
     </div>
-    <div class="flex items-center text-sm text-gray-600 dark:text-gray-300">
+    <div class="flex items-center">
       <NuxtIcon
         name="ph:clock"
         class="text-blue-600 mr-2 text-4"
       />
       Created {{ object.createdAt }}
     </div>
-    <button
-      type="button"
-      class="mt-4 w-full bg-orange-500 hover:bg-orange-600 dark:bg-orange-600 dark:hover:bg-orange-700 text-white py-2 px-4 rounded-md"
+    <UiButton
+      variant="secondary"
+      size="lg"
+      class="mt-4 w-full"
     >
       View Details
-    </button>
+    </UiButton>
   </HomeCarouselItem>
 </template>
 

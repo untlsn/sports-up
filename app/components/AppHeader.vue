@@ -13,18 +13,7 @@
       <span class="text-xl font-bold text-green-600">Sports-Up</span>
     </div>
     <LazyAppHeaderNavigationDesktop hydrate-on-media-query="width >= 48rem" />
-    <div class="flex items-center gap-4">
-      <AppHeaderOptionsMenu />
-      <UiButton
-        variant="outline"
-        class="hidden lg:flex border-green-500 text-green-600 hover:bg-green-50 dark:text-green-400 dark:border-green-400 dark:hover:bg-green-950"
-      >
-        Sign In
-      </UiButton>
-      <UiButton class="bg-orange-500 text-white hover:bg-orange-600 dark:bg-orange-600 dark:hover:bg-orange-700">
-        Get Started
-      </UiButton>
-    </div>
+    <AppHeaderOptions />
   </header>
 </template>
 

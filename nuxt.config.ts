@@ -11,6 +11,8 @@ export default defineNuxtConfig({
     '@nuxt/test-utils',
     'shadcn-nuxt',
     '@nuxtjs/color-mode',
+    '@pinia/nuxt',
+    '@pinia/colada-nuxt',
   ],
 
   devtools: { enabled: true },
@@ -31,7 +33,7 @@ export default defineNuxtConfig({
 
   srcDir: './app',
 
-  devServer: { port: 3400 },
+  devServer: { port: import.meta.env.SERVER_PORT },
 
   future: {
     compatibilityVersion: 4,

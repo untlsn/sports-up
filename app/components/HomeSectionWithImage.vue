@@ -2,6 +2,7 @@
 defineProps<{
   title:       string;
   description: string;
+  img:         string;
 }>();
 
 defineSlots<{
@@ -21,7 +22,7 @@ defineSlots<{
       <slot />
     </div>
     <img
-      src="/placeholder.png"
+      :src="img"
       width="600"
       height="600"
       alt="Sports activities"

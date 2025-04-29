@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const events = [
   {
     id:           1,
@@ -42,34 +42,35 @@ const events = [
   <HomeCarouselItem
     v-for="event in events"
     :key="event.id"
-    :title="event.event"
+    :title="event.title"
   >
-    <div class="flex items-center text-sm text-gray-600 dark:text-gray-300">
+    <div class="flex items-center">
       <NuxtIcon
         name="ph:calendar-blank"
         class="text-green-600 mr-2 text-4"
       />
       {{ event.date }}
     </div>
-    <div class="flex items-center text-sm text-gray-600 dark:text-gray-300">
+    <div class="flex items-center">
       <NuxtIcon
         name="ph:map-pin"
         class="text-orange-600 mr-2 text-4"
       />
       {{ event.location }} rating
     </div>
-    <div class="flex items-center text-sm text-gray-600 dark:text-gray-300">
+    <div class="flex items-center">
       <NuxtIcon
         name="ph:users"
         class="text-blue-600 mr-2 text-4"
       />
       Created {{ event.participants }}
     </div>
-    <button
+    <UiButton
       type="button"
-      class="mt-4 w-full bg-green-600 hover:bg-green-700 dark:bg-green-700 dark:hover:bg-green-800 text-white py-2 px-4 rounded-md"
+      class="mt-4 w-full"
+      size="lg"
     >
       View Details
-    </button>
+    </UiButton>
   </HomeCarouselItem>
 </template>

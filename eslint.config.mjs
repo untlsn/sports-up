@@ -26,5 +26,46 @@ export default withNuxt({
       },
       multilineDetection: 'brackets',
     }],
+    'eqeqeq': 1,
+  },
+}, {
+  // Nuxt allow for ~ and @ aliases. For consistency every ~ alias will be replaced with @
+  plugins: {
+    custom: {
+      rules: {
+        'no-tilde-alias': {
+          meta: { fixable: 'code' },
+          create(context) {
+            return {
+              ImportDeclaration(node) {
+                if (node.source.value.startsWith('~/')) {
+                  context.report({
+                    node:    node.source,
+                    message: 'Unexpected tilde alias. Use \'@/\' instead.',
+                    fix:     function (fixer) {
+                      const newPath = node.source.value.replace(/^~\//, '@/');
+                      return fixer.replaceText(node.source, `'${newPath}'`);
+                    },
+                  });
+                }
+                if (node.source.value.startsWith('~~/')) {
+                  context.report({
+                    node:    node.source,
+                    message: 'Unexpected double tilde alias. Use \'@@/\' instead.',
+                    fix:     function (fixer) {
+                      const newPath = node.source.value.replace(/^~~\//, '@@/');
+                      return fixer.replaceText(node.source, `'${newPath}'`);
+                    },
+                  });
+                }
+              },
+            };
+          },
+        },
+      },
+    },
+  },
+  rules: {
+    'custom/no-tilde-alias': 'warn',
   },
 });

@@ -1,15 +1,15 @@
 <script lang="ts" setup>
-import { cn } from '@/utils/shadcn'
-import { useId } from 'reka-ui'
-import { type HTMLAttributes, provide } from 'vue'
-import { FORM_ITEM_INJECTION_KEY } from './injectionKeys'
+import { useId } from 'reka-ui';
+import { type HTMLAttributes, provide } from 'vue';
+import { FORM_ITEM_INJECTION_KEY } from './injectionKeys';
+import { cn } from '@/utils/shadcn';
 
 const props = defineProps<{
-  class?: HTMLAttributes['class']
-}>()
+  class?: HTMLAttributes['class'];
+}>();
 
-const id = useId()
-provide(FORM_ITEM_INJECTION_KEY, id)
+const id = useId();
+provide(FORM_ITEM_INJECTION_KEY, id);
 </script>
 
 <template>

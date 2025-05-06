@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <header class="sticky top-0 z-40 border-b bg-white dark:bg-gray-950 dark:border-gray-800 flex h-16 items-center p-4 md:px-12">
+  <header class="sticky top-0 z-top border-b bg-white dark:bg-gray-950 dark:border-gray-800 flex h-16 items-center p-4 md:px-12">
     <LazyAppHeaderNavigationMobile />
     <AppLogoLabeled />
     <LazyAppHeaderNavigationDesktop hydrate-on-media-query="width >= 48rem" />

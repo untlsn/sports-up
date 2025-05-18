@@ -1,15 +1,14 @@
-import * as pg from 'drizzle-orm/pg-core';
+import * as sqlite from 'drizzle-orm/sqlite-core';
+import { dbGenericColumns } from './utilsCustomColumns';
 
-export const object = pg.pgTable('object', {
-  id:          pg.text().primaryKey(),
-  name:        pg.text().notNull(),
-  address:     pg.text().notNull(),
-  description: pg.text().notNull(),
-  lat:         pg.integer().notNull(),
-  lng:         pg.integer().notNull(),
-  timeStart:   pg.text().notNull(),
-  timeEnd:     pg.text().notNull(),
-  days:        pg.integer().notNull(),
-  createdAt:   pg.timestamp().notNull(),
-  updatedAt:   pg.timestamp().notNull(),
+export const object = sqlite.sqliteTable('object', {
+  ...dbGenericColumns,
+  name:        sqlite.text().notNull(),
+  address:     sqlite.text().notNull(),
+  description: sqlite.text().notNull(),
+  lat:         sqlite.integer().notNull(),
+  lng:         sqlite.integer().notNull(),
+  timeStart:   sqlite.text().notNull(),
+  timeEnd:     sqlite.text().notNull(),
+  days:        sqlite.integer().notNull(),
 });

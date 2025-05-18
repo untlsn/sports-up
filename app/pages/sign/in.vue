@@ -68,9 +68,7 @@ const onSubmit = handleSubmit(mutate);
           </div>
         </template>
       </AuthFormInput>
-      <p class="text-center py-2 text-sm text-destructive-foreground">
-        {{ error?.message }}
-      </p>
+      <AuthFormMutationErrorDisplay :error />
     </UiCardContent>
     <UiCardFooter class="flex flex-col space-y-4">
       <UiButton
